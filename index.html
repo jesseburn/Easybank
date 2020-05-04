@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EasyBank</title>
+    <meta name="description" content="EasyBank landing page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles/output.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+</head>
+<style>
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+        font-family: 'Public Sans', sans-serif;
+    }
+
+
+    /* #bg {
+    background: url('./images/bg-intro-desktop.svg') no-repeat top right; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+        @media only screen and (min-width: 640px) {
+            background-image: url('./images/bg-intro-mobile.svg');
+            text-indent: -9999px;
+        }
+    } */
+
+    .mockups{
+        margin-top: -59rem;
+    }
+    @media only screen and (max-width: 640px) {
+        .mockups {
+            margin-top: -30rem;
+        }
+    }
+
+    .btn {
+        background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    }
+
+    .btn:hover {
+        background: linear-gradient(to right, hsl(135, 65%,75%), hsl(191,70%,55%));
+    }
+
+    nav a:hover{
+        color: hsl(233, 26%, 24%);
+        border-bottom: 2px solid  hsl(192, 70%, 51%);
+    }
+</style>
+
+<body class="m-0 p-0 text-lg">
+    <header class="bg-white pb-2">
+        <nav class="flex flex-row justify-between p-4 sm:justify-around sm:items-baseline">
+            <img src="./images/logo.svg" alt="Easybank" aria-label="easybank">
+            <div class="hidden sm:flex flex flex-col justify-center items-center shadow-lg border absolute
+            w-10/12 h-56 ml-2 my-10 opacity-100 bg-white sm:items-baseline sm:flex-row sm:m-0 sm:h-auto sm:w-2/5
+            sm:border-transparent sm:relative sm:shadow-none">
+                <a href="" aria-label="Home" class="mt-2 sm:mt-0 sm:mr-3 text-primary-100 sm:text-neutral-100">Home</a>
+                <a href="" aria-label="About"
+                    class="mt-2 sm:mt-0 sm:mr-3 text-primary-100 sm:text-neutral-100">About</a>
+                <a href="" aria-label="Contact"
+                    class="mt-2 sm:mt-0 sm:mr-3 text-primary-100 sm:text-neutral-100">Contact</a>
+                <a href="" aria-label="Blog" class="mt-2 sm:mt-0 sm:mr-3 text-primary-100 sm:text-neutral-100">Blog</a>
+                <a href="" aria-label="Careers"
+                    class="mt-2 sm:mt-0 sm:mr-3 text-primary-100 sm:text-neutral-100">Careers</a>
+            </div>
+            <img src="./images/icon-hamburger.svg" alt="mobile nav open" aria-label="mobile nav open"
+                class="sm:hidden ham">
+            <img src="./images/icon-close.svg" alt="mobile nav close" aria-label="mobile nav close"
+                class="hidden close">
+            <button class="hidden sm:block btn w-40 h-10 rounded-full text-white text-base">Request Invite</button>
+        </nav>
+    </header>
+    <section class="bg-gray-100 flex flex-col-reverse justify-center items-center text-center pb-6 sm:flex-row overflow-x-visible">
+        <div class="pt-10 sm:text-left sm:w-3/4">
+            <h1 class="text-4xl text-primary-100 sm:text-5xl sm:w-full sm:pl-40 sm:pr-20">Next generation digital banking
+            </h1>
+            <p class="text-neutral-100 text-sm w-full px-2 py-4 sm:text-lg sm:pl-40 sm:pr-32 sm:w-full">Take your
+                financial life online. Your Easybank account
+                will be a one-stop-shop for spending,
+                saving, budgeting, investing, and much more.
+            </p>
+            <button class="btn w-48 h-12 rounded-full text-white text-base sm:ml-40 sm:mt-5">Request Invite</button>
+        </div>
+        <div class="object-cover object-center overflow-y-hidden sm:-mr-32 sm:relative sm:w-auto sm:object-contain" id="bg">
+            <img src="./images/bg-intro-desktop.svg" id="bg-desktop" class="hidden sm:block">
+            <img src="./images/bg-intro-mobile.svg" id="bg-mobile" class="sm:hidden block">
+            <img src="./images/image-mockups.png" alt="image-mockups" aria-label="image-mockups"
+                class="overflow-hidden block sm:-mt-56 sm:relative sm:object-contain mockups">
+        </div>
+    </section>
+    <section class="pt-10 pb-4 sm:pb-8 bg-neutral-200 text-center flex flex-col justify-center items-center">
+        <div class="pb-5 sm:flex sm:flex-col sm:text-left sm:flex-start sm:w-full sm:pl-32 sm:pb-24">
+            <h2 class="text-primary-100 text-3xl sm:text-4xl">Why choose Easybank?</h2>
+            <p class="text-neutral-100 text-sm w-full px-4 py-4 sm:p-0 sm:text-lg sm:w-1/2 sm:leading-relaxed">We
+                leverage Open Banking to turn your bank account into
+                your financial hub. Control your
+                finances like never before.
+            </p>
+        </div>
+        <div class="sm:flex flex-row sm:w-full">
+            <div
+                class="flex flex-col justify-center items-center pb-5 sm:justify-start sm:items-start sm:text-left sm:w-1/2 sm:ml-32 sm:mr-16 sm:p-0">
+                <img src="./images/icon-online.svg" alt="icon-online" aria-label="icon-online"
+                    class="object-cover object-center">
+                <h3 class="text-primary-100 text-xl pt-2 sm:py-4">Online Banking</h3>
+                <p class="text-neutral-100 text-sm w-full px-4 py-4 sm:p-0 sm:text-base">Our modern web and mobile
+                    applications allow you to
+                    keep track of your finances wherever
+                    you are in the world.
+                </p>
+            </div>
+            <div>
+                <div
+                    class="flex flex-col justify-center items-center pb-5 sm:text-left sm:justify-start sm:items-start sm:w-10/12 sm:p-0">
+                    <img src="./images/icon-budgeting.svg" alt="icon-budgeting" aria-label="icon-budgeting"
+                        class="object-cover object-center">
+                    <h3 class="text-primary-100 text-xl pt-2 sm:py-4">Simple Budgeting</h3>
+                    <p class="text-neutral-100 text-sm w-full px-4 py-4 sm:p-0 sm:text-base">See exactly where your
+                        money goes each month.
+                        Receive notifications when you're close
+                        to hitting your limits.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div
+                    class="flex flex-col justify-center items-center pb-5 pt-2 sm:text-left sm:justify-start sm:items-start sm:w-3/4 sm:p-0">
+                    <img src="./images/icon-onboarding.svg" alt="icon-onboarding" aria-label="icon-onboarding"
+                        class="object-cover object-center">
+                    <h3 class="text-primary-100 text-xl pt-2 sm:py-4">Fast Onboarding</h3>
+                    <p class="text-neutral-100 text-sm w-full px-4 py-4 sm:p-0 sm:text-base">We don't do branches. Open
+                        your account online
+                        in minutes and start taking control of your
+                        finances right away.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div
+                    class="flex flex-col justify-center items-center sm:text-left sm:justify-start sm:items-start sm:w-3/4 sm:p-0">
+                    <img src="./images/icon-api.svg" alt="icon-api" aria-label="icon-api"
+                        class="object-cover object-center">
+                    <h3 class="text-primary-100 text-xl pt-2 sm:py-4">Open API</h3>
+                    <p class="text-neutral-100 text-sm w-full px-4 py-4 sm:p-0 sm:text-base">Manage your savings,
+                        investments, pensions, and
+                        much more from one account. Tracking your money
+                        has never been easier.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 flex flex-col justify-center items-center bg-gray-100 text-center">
+        <h3 class="text-3xl text-primary-100 py-5 sm:text-4xl sm:w-full sm:text-left sm:pl-32">Latest Articles</h3>
+        <div class="pl-6 sm:p-0 sm:flex sm:flex-row sm:w-full sm:pl-32">
+            <div class="bg-white w-11/12 text-left p-3 mb-5 rounded sm:pl-0 sm:bg-transparent sm:w-70">
+                <img src="./images/image-currency.jpg" aria-label="image-currency" alt="image-currency"
+                    class="rounded w-full object-cover object-center sm:h-44 sm:rounded-t sm:rounded-b-none">
+                <p class="text-xs text-neutral-100 py-2 sm:bg-white sm:pl-4">By Claire Robinson</p>
+                <a href="" class="text-base text-primary-100 sm:bg-white sm:pl-4 inline-block hover:text-primary-300">Receive money in any currency with no fees</a>
+                <p class="text-sm text-neutral-100 py-2 sm:bg-white sm:rounded-b sm:pl-4 sm:pr-2">The world is getting smaller and we're becoming more mobile. So
+                    why
+                    should you be forced
+                    to only receive money in a single...
+                </p>
+            </div>
+            <div class="bg-white w-11/12 text-left p-3 mb-5 rounded sm:bg-transparent sm:w-70">
+                <img src="./images/image-restaurant.jpg" aria-label="image-restaurant" alt="image-restaurant"
+                    class="rounded w-full object-cover object-center sm:rounded-t sm:rounded-b-none">
+                <p class="text-xs text-neutral-100 py-2 sm:bg-white sm:pl-4">By Wilson Hutton</p>
+                <a href="" class="text-base text-primary-100 sm:bg-white sm:pl-4 inline-block hover:text-primary-300">Treat yourself without worrying about money</a>
+                <p class="text-sm text-neutral-100 py-2 sm:bg-white sm:rounded-b sm:pl-4 sm:pr-2">Our simple budgeting feature allows you to seperate out your
+                    spending and realistic limits
+                    each month. That means you...
+                </p>
+            </div>
+            <div class="bg-white w-11/12 text-left p-3 mb-5 rounded sm:bg-transparent sm:w-70">
+                <img src="./images/image-plane.jpg" aria-label="image-plane" alt="image-plane"
+                    class="rounded w-full object-cover object-center sm:rounded-t sm:rounded-b-none">
+                <p class="text-xs text-neutral-100 py-2 sm:bg-white sm:pl-4">By Wilson Hutton</p>
+                <a href="" class="text-base text-primary-100 sm:bg-white sm:pl-4 inline-block hover:text-primary-300">Take your Easybank card wherever you go</a>
+                <p class="text-sm text-neutral-100 py-2 sm:bg-white sm:rounded-b sm:pl-4 sm:pr-2">We want you to enjoy your travels. This is why we don't charge
+                    any
+                    fees on purchases while
+                    you're abroad. We'll even show you...
+                </p>
+            </div>
+            <div class="bg-white w-11/12 text-left p-3 mb-5 rounded sm:bg-transparent sm:w-70">
+                <img src="./images/image-confetti.jpg" aria-label="image-confetti" alt="image-confetti"
+                    class="rounded w-full object-cover object-center sm:rounded-t sm:rounded-b-none">
+                <p class="text-xs text-neutral-100 py-2 sm:bg-white sm:pl-4">By Claire Robinson</p>
+                <a href="" class="text-base text-primary-100 sm:bg-white sm:pl-4 sm:pr-2 inline-block hover:text-primary-300">Our invite-only Beta accounts are now live!</a>
+                <p class="text-sm text-neutral-100 py-2 sm:bg-white sm:rounded-b sm:pl-4 sm:pr-2">After a lot of hard work by the whole team, we're excited to
+                    launch
+                    our closed beta. It's
+                    easy to request an invite through the site...</p>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-primary-100 text-gray-100 flex flex-col justify-center items-center sm:flex-row sm:justify-between sm:py-10">
+        <div class="flex flex-col justify-center items-center sm:ml-32">
+            <img src="./images/logo-white.svg" alt="logo" aria-label="logo" class="object-cover object-center my-6">
+            <div class="flex flex-row w-full pb-5">
+                <img src="./images/icon-facebook.svg" aria-label="icon-facebook" alt="icon-facebook"
+                    class="object-cover object-center w-6 mr-4">
+                <img src="./images/icon-twitter.svg" aria-label="icon-twitter" alt="icon-twitter"
+                    class="object-cover object-center w-6 mr-4">
+                <img src="./images/icon-youtube.svg" alt="icon-youtube" aria-label="icon-youtube"
+                    class="object-cover object-center w-6 mr-4">
+                <img src="./images/icon-instagram.svg" aria-label="icon-instagrama" alt="icon-instagram"
+                    class="object-cover object-center w-6 mr-4">
+                <img src="./images/icon-pinterest.svg" aria-label="icon-pinterest" alt="icon-pinterest"
+                    class="object-cover object-center">
+            </div>
+        </div>
+        <div class="flex flex-col text-base text-center sm:flex-row sm:text-left sm:w-1/3 sm:justify-start">
+            <div class="flex flex-col">
+                <a href="" aria-label="About Us" class="mb-2 sm:mr-20 sm:mt-2 hover:text-primary-300">About Us</a>
+                <a href="" aria-label="Contact" class="mb-2 hover:text-primary-300">Contact</a>
+                <a href="" aria-label="Blog" class="mb-2 hover:text-primary-300">Blog</a>
+            </div>
+            <div class="flex flex-col">
+                <a href="" aria-label="Careers" class="mb-2 sm:mt-2 hover:text-primary-300">Careers</a>
+                <a href="" aria-label="Support" class="mb-2 hover:text-primary-300">Support</a>
+                <a href="" aria-label="Privacy Policy" class="mb-2 hover:text-primary-300">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center py-3 sm:mr-16 sm:py-0 sm:pt-3">
+            <button class="btn w-40 h-10 rounded-full text-white text-base sm:mt-1">Request Invite</button>
+            <p class="text-sm text-neutral-100 py-3 sm:mt-5">&copy Easybank. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            //mobile nav
+            $(".ham").click(function () {
+                $("nav").children("div").toggleClass("hidden");
+                $(".close").toggleClass("hidden");
+                $(".ham").toggleClass("hidden");
+            });
+
+            $(".close").click(function () {
+                if ($("nav").children("div").hasClass("hidden")) {
+
+                    $("nav").children("div").removeClass("hidden");
+                } else {
+                    $(".close").toggleClass("hidden");
+                    $(".ham").toggleClass("hidden");
+                    $("nav").children("div").addClass("hidden");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
